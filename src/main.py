@@ -16,7 +16,6 @@ process_response(send_query_request(username, password, ip))
 
 print("==================================================")
 
-
 process_response(send_login_request(username, password, ip, belongs[2]))
 
 print("==================================================")
