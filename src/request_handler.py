@@ -25,7 +25,7 @@ def send_login_request(username, password, ip, belongs):
 
     url = f"https://10.1.1.1:802/eportal/portal/" \
           f"login?callback=dr1004&login_method=1" \
-          f"&user_account=%2C0%2C{username}%40{belongs[2]}" \
+          f"&user_account=%2C0%2C{username}%40{belongs}" \
           f"&user_password={urllib.parse.quote(password)}" \
           f"&wlan_user_ip={ip}" \
           f"&jsVersion=4.1.3&terminal_type=1&lang=zh-cn&v=2913&lang=zh"

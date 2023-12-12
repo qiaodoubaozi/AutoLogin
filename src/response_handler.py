@@ -17,12 +17,13 @@ def process_response(response):
     print(f"Result: {result}")
     print(f"Message: {msg}")
     if msg == "查询数据成功":
-        print("--------------------------------------------------")
+        print(f"total: {response_dict.get('total')}")
+        print(f"AccountMaxLogin: {response_dict.get('accountmaxlogin')}")
         data = response_dict.get('data')
         for i in range(len(data)):
+            print("--------------------------------------------------")
             print(f"第{i+1}个设备:")
             for key, value in data[i].items():
                 print(f"{key}: {value}")
-            print("--------------------------------------------------")
-        print(f"total: {response_dict.get('total')}")
-        print(f"AccountMaxLogin: {response_dict.get('accountmaxlogin')}")
+
+    print("==================================================")
