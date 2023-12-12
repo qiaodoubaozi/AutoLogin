@@ -12,7 +12,7 @@ def send_query_request(username, password, ip):
 
     url = f"https://10.1.1.1:802/eportal/portal/Custom/" \
           f"online_data?callback=dr1003&username={username}" \
-          f"&password={urllib.parse.quote(password)}&ip={ip}&lang=zh"
+          f"&password={urllib.parse.quote(password)}&ip={ip}"
 
     response = requests.get(url, verify=False).content
     return response
@@ -27,8 +27,7 @@ def send_login_request(username, password, ip, belongs):
           f"login?callback=dr1004&login_method=1" \
           f"&user_account=%2C0%2C{username}%40{belongs}" \
           f"&user_password={urllib.parse.quote(password)}" \
-          f"&wlan_user_ip={ip}" \
-          f"&jsVersion=4.1.3&terminal_type=1&lang=zh-cn&v=2913&lang=zh"
+          f"&wlan_user_ip={ip}"
 
     response = requests.get(url, verify=False).content
     return response
